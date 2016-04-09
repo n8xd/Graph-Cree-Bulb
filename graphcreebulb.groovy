@@ -144,7 +144,7 @@ def genGraph()
        def podParams = [
           uri: "https://chart.googleapis.com",
           path: "/chart",
-          query: [cht: "p3", chd: "t:${state.oncount},${state.offcount}", chs: "400x150", chl: "On ${onp}%|Off ${offp}%", chof: "gif"],
+          query: [cht: "p3", chd: "t:${onp},${offp}", chs: "400x150", chl: "On ${onp}%|Off ${offp}%", chof: "gif"],
           contentType: 'image/gif'
         ]
         httpGet(podParams) { resp ->
